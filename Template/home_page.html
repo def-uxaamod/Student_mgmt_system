@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Student STM</title>
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+
+<body style="background-image: url('static/image/img.jpg'); background-repeat: no-repeat;
+            background-position: right;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" style="background-color: yellow;">
+            <a href="{%url 'home_page' %}">
+                <img src="{%static 'image/logo.png' %}" style="width: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{%url 'entry' %}">Entry details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https:\\google.com">Google</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https:\\youtube.com">Youtube</a>
+                    </li>
+                </ul>
+                <div
+                    style="font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <a href="{%url 'view' %}" style="color: blueviolet; text-align: right;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+
+
+    {% endblock content %}
+    <script src="{%static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
